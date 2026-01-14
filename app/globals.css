@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --primary: 45 93% 47%;
+    --ring: 45 93% 47%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-slate-700;
+  }
+  body {
+    @apply bg-slate-950 text-white;
+  }
+}
+
+@layer utilities {
+  @keyframes pulse-slow {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .7;
+    }
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse-slow 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Mobile touch improvements */
+@media (hover: none) and (pointer: coarse) {
+  button, a {
+    -webkit-tap-highlight-color: rgba(245, 158, 11, 0.3);
+  }
+}
