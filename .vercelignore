@@ -1,0 +1,16 @@
+../*.py
+../*.txt
+../*.bat
+../*.md
+../venv
+../__pycache__
+../static
+../.env
+../.git
+requirements.txt
+*.py
+venv
+__pycache__
+.env.local
+node_modules
+.next
